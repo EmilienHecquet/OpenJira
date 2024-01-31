@@ -57,6 +57,10 @@ jobs:
           username: ${{ secrets.REACTUSERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Display Dockerfile path
+        run: |
+          echo "Dockerfile is located at: ${{ github.workspace }}/Dockerfile"
+
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
