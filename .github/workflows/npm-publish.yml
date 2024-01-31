@@ -64,8 +64,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: ./
-          file: ./Dockerfile
+          context: /home/runner/work/OpenJira/OpenJira/
+          file: /home/runner/work/OpenJira/OpenJira/Dockerfile
           push: true
           tags: ${{ secrets.REACTUSERNAME }}/open_jira:latest
 
