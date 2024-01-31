@@ -60,6 +60,8 @@ jobs:
       - name: Display Dockerfile path
         run: |
           echo "Dockerfile is located at: ${{ github.workspace }}/Dockerfile"
+          cd /home/runner/work/OpenJira/OpenJira/
+          ls -a
 
       - name: Build and push
         uses: docker/build-push-action@v2
