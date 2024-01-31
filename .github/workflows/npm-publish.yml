@@ -57,6 +57,12 @@ jobs:
           username: ${{ secrets.REACTUSERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Debug Directory Contents
+        run: |
+          ls -la
+          ls -la /
+          ls -la $GITHUB_WORKSPACE    
+
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
